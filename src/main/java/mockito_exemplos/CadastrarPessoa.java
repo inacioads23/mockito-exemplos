@@ -1,5 +1,7 @@
 package mockito_exemplos;
 
+import java.time.LocalDate;
+
 public class CadastrarPessoa {
 
     private ApiDosCorreios apiDosCorreios;
