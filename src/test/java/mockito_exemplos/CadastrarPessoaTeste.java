@@ -23,7 +23,7 @@ public class CadastrarPessoaTeste {
     @Mock
     private ApiDosCorreios apiDosCorreios;
 
-    @InjectMocks
+    @InjectMocks //Injeta o mock nessa classe
     private CadastrarPessoa cadastrarPessoa;
 
     @Test
