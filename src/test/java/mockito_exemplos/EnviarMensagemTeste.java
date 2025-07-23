@@ -14,7 +14,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 @ExtendWith(MockitoExtension.class)
 public class EnviarMensagemTeste {
 
-    @Spy
+    @Spy //Espiar. Referencia um objeto real da classe
     EnviarMensagem enviarMensagem = new EnviarMensagem();
 
     @Test

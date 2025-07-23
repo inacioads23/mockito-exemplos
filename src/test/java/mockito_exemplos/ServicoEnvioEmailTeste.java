@@ -20,10 +20,10 @@ public class ServicoEnvioEmailTeste {
 	@Mock
 	private PlataformaDeEnvio plataforma;
 
-	@InjectMocks
+	@InjectMocks // plataforma de teste
 	private ServicoEnvioEmail servico;
 
-	@Captor
+	@Captor // Captura argumento de um método
 	private ArgumentCaptor<Email> emailCaptor;
 
 	@Test
@@ -35,7 +35,9 @@ public class ServicoEnvioEmailTeste {
 		servico.enviaEmail(email, mensagem, true);
 		Mockito.verify(plataforma).enviaEmail(emailCaptor.capture());
 
-		Email emailCapturado = emailCaptor.getValue();
+		Email emailCapturado = emailCaptor.getValue();		
+		Assertions.assertEquals(email, emailCapturado.getEnderecoEmail());
+		Assertions.assertEquals(mensagem, emailCapturado.getMensagem());
 		Assertions.assertEquals(Formato.HTML, emailCapturado.getFormato());
 	}
 
