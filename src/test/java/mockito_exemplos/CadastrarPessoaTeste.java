@@ -17,7 +17,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
  * Teste da classe {@link CadastrarPessoa} apresentando cenários básicos de uso do Mockito, usando o recurso
  * de mocks e a manipulação de retornos, da forma mais simples e com manipulação de erros
  */
-@ExtendWith(MockitoExtension.class)
+@ExtendWith(MockitoExtension.class) // para fazer testes usando Mockito de forma integrada ao JUnit
 public class CadastrarPessoaTeste {
 
     @Mock
