@@ -34,13 +34,8 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-core</artifactId>
-			<version>5.18.0</version>
-			<scope>test</scope>
-		</dependency>
-
+		<!-- Obs.: 'mockito-core'' não permite teste com métodos estáticos. Caso
+		tenha essa dependência, trocar por 'mockito-inline' -->
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-inline</artifactId>
